@@ -32,7 +32,7 @@ os.system("mkdir ./figs")
 
 # plot DEM
 gridIndr = pygmt.datasets.load_earth_relief(resolution="01s",
-											region=[107.85, 108.6, -6.666667,-6.25])
+	region=[107.85, 108.6, -6.666667,-6.25])
 fig = pygmt.Figure()
 fig.grdimage(grid=gridIndr, projection="M15c", frame="a", cmap="geo")
 fig.plot(x=108.3258, y=-6.3373, style="c0.5c",fill="red")
