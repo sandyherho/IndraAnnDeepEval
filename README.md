@@ -1,8 +1,11 @@
 # Performance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over Indramayu, Indonesia
 
+[![python](https://img.shields.io/badge/python-★★★-lightgrey?labelColor=3776AB&logo=Python&style=for-the-badge&logoColor=white)](https://www.python.org/)
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 [![GitHub watchers](https://img.shields.io/github/watchers/Naereen/StrapDown.js.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/sandyherho/IndraAnnDeepEval/watchers)
+
 [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 
@@ -42,7 +45,7 @@ We run the code under the [Python 3](https://www.python.org/) computing environm
 - [scikit-learn](https://scikit-learn.org/)
 - [xarray](https://docs.xarray.dev/en/)
 
-Climate Hazards Infrared Precipitation with Stations (CHIRPS) precipitation dataset [(Funk et al, 2015)](https://www.nature.com/articles/sdata201566).) was accessed via [Climate Hazards Center, UC Santa Barbara website](https://data.chc.ucsb.edu/products/CHIRPS-2.0/).
+Climate Hazards Infrared Precipitation with Stations (CHIRPS) precipitation dataset [(Funk et al, 2015)](https://www.nature.com/articles/sdata201566) was accessed via [Climate Hazards Center, UC Santa Barbara website](https://data.chc.ucsb.edu/products/CHIRPS-2.0/).
 
 ### Acknowledgements
 
