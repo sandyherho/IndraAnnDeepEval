@@ -9,7 +9,7 @@
 This GitHub repository contains code used for **Performance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over Indramayu, Indonesia** created by [Sandy H. S. Herho](https://scholar.google.com/citations?user=uYQgjxMAAAAJ&hl=id) and [Dasapta E. Irawan](https://scholar.google.com/citations?user=Myvc78MAAAAJ&hl=en) at [Applied Geology Research Group](https://itb.ac.id/applied-geology-research-group), Bandung Institute of Technology (ITB), Indonesia.
 
 ### License
-This code is released under the [GPL-3.0 License](https://github.com/sandyherho/IndraAnnDeepEval/blob/main/LICENSE.txt).
+This code was released under the [GPL-3.0 License](https://github.com/sandyherho/IndraAnnDeepEval/blob/main/LICENSE.txt).
 
 ### Citation
 If you find this code useful in your study, please  consider citing our paper:
@@ -35,13 +35,15 @@ We run the code under the [Python 3](https://www.python.org/) computing environm
 - [cartopy](https://scitools.org.uk/cartopy/docs/latest/)
 - [matplotlib](https://matplotlib.org/)
 - [numpy](https://numpy.org/)
+- [keras](https://keras.io/)
+- [keras-visualizer](https://github.com/mahyar-amiri/keras-visualizer)
 - [pandas](https://pandas.pydata.org/)
-- [pyleoclim](https://pyleoclim-util.readthedocs.io/)
-- [scipy](https://scipy.org/)
+- [tensorflow](https://www.tensorflow.org/)
+- [scikit-learn](https://scikit-learn.org/)
 - [xarray](https://docs.xarray.dev/en/)
 
 Paleo Hydrodynamics Data Assimilation (PHYDA) [(Steiger et al, 2018)](https://www.nature.com/articles/sdata201886) was accessed via [NOAA/NCEI Paleoclimatology data library](https://www.ncei.noaa.gov/access/paleo-search/study/24230).
 
 ### Acknowledgements
 
-Faiz Fajary was acknowledged for providing valuable discussion. This study was supported by xxx.
+Faiz R. Fajary (Hiroshima University) and Spyros Giannelos (Imperial College London) were acknowledged for providing valuable discussion. This study was supported by ITB Research, Community Service and Innovation Program (P3MI-ITB).
