@@ -1,4 +1,4 @@
-# Performance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over Indramayu Regency, Indonesia
+# Performance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over Indramayu, Indonesia
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
@@ -6,7 +6,7 @@
 [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 
-This GitHub repository contains code used for **Performance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over Indramayu Regency, Indonesia** created by [Sandy H. S. Herho](https://scholar.google.com/citations?user=uYQgjxMAAAAJ&hl=id) and [Dasapta E. Irawan](https://scholar.google.com/citations?user=Myvc78MAAAAJ&hl=en) at [Applied Geology Research Group](https://itb.ac.id/applied-geology-research-group), Bandung Institute of Technology (ITB), Indonesia.
+This GitHub repository contains code used for **Performance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over Indramayu, Indonesia** created by [Sandy H. S. Herho](https://scholar.google.com/citations?user=uYQgjxMAAAAJ&hl=id) and [Dasapta E. Irawan](https://scholar.google.com/citations?user=Myvc78MAAAAJ&hl=en) at [Applied Geology Research Group](https://itb.ac.id/applied-geology-research-group), Bandung Institute of Technology (ITB), Indonesia.
 
 ### License
 This code is released under the [GPL-3.0 License](https://github.com/sandyherho/IndraAnnDeepEval/blob/main/LICENSE.txt).
