@@ -16,7 +16,7 @@ If you find this code useful in your study, please  consider citing our paper:
 
 
 `
-@article{herho21,
+@article{herhoIrawan23,
          author={Herho, S. H. S. and Irawan, D. E.},
          title={{P}erformance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over {I}ndramayu, {I}ndonesia},
          journal={{I}nternational {J}ournal of {D}ata {S}cience},
