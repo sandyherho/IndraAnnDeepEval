@@ -6,7 +6,7 @@
 [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 
-This GitHub repository contains code used for **Performance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over Indramayu, Indonesia** created by [Sandy H. S. Herho](https://scholar.google.com/citations?user=uYQgjxMAAAAJ&hl=id) and [Dasapta E. Irawan](https://scholar.google.com/citations?user=Myvc78MAAAAJ&hl=en) at [Applied Geology Research Group](https://itb.ac.id/applied-geology-research-group), Bandung Institute of Technology (ITB), Indonesia.
+This GitHub repository contains code used for **Performance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over Indramayu, Indonesia** created by [Sandy H. S. Herho](https://scholar.google.com/citations?user=uYQgjxMAAAAJ&hl=id) and [Dasapta E. Irawan](https://scholar.google.com/citations?user=Myvc78MAAAAJ&hl=en) at the [Applied Geology Research Group](https://itb.ac.id/applied-geology-research-group), Bandung Institute of Technology (ITB), Indonesia.
 
 ### License
 This code was released under the [GPL-3.0 License](https://github.com/sandyherho/IndraAnnDeepEval/blob/main/LICENSE.txt).
@@ -42,7 +42,7 @@ We run the code under the [Python 3](https://www.python.org/) computing environm
 - [scikit-learn](https://scikit-learn.org/)
 - [xarray](https://docs.xarray.dev/en/)
 
-Paleo Hydrodynamics Data Assimilation (PHYDA) [(Steiger et al, 2018)](https://www.nature.com/articles/sdata201886) was accessed via [NOAA/NCEI Paleoclimatology data library](https://www.ncei.noaa.gov/access/paleo-search/study/24230).
+Climate Hazards Infrared Precipitation with Stations (CHIRPS) precipitation dataset [(Funk et al, 2015)](https://www.nature.com/articles/sdata201566).) was accessed via [Climate Hazards Center, UC Santa Barbara website](https://data.chc.ucsb.edu/products/CHIRPS-2.0/).
 
 ### Acknowledgements
 
