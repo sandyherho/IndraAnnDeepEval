@@ -326,11 +326,11 @@ time = t.to_numpy().reshape(-1,1)
 tf.random.set_seed(42)
 
 for deg in range(1,3): # 1,2   (previously was degree=3)
-    poly = PolynomialFeatures(degree= deg, include_bias=False)  # reminder1
-    X_dnn = poly.fit_transform(time)    # reminder2
-    X_train_dnn = X_dnn[: train_size, : ]      # reminder3
+    poly = PolynomialFeatures(degree= deg, include_bias=False)
+    X_dnn = poly.fit_transform(time)   
+    X_train_dnn = X_dnn[: train_size, : ]      
     X_test_dnn = X_dnn[train_size: , : ] 
-    x_scaler_dnn = StandardScaler().fit(X_train_dnn)  # reminder4
+    x_scaler_dnn = StandardScaler().fit(X_train_dnn)  
     X_train_scaled_dnn = x_scaler_dnn.transform(X_train_dnn)  
     X_test_scaled_dnn = x_scaler_dnn.transform(X_test_dnn)
 #     x_scaler_all_dnn = StandardScaler().fit(X_dnn)   
@@ -341,15 +341,15 @@ for deg in range(1,3): # 1,2   (previously was degree=3)
         for nepo in range(50,150,50):   # 50, 100
             for un in range(50,150,50):
     
-                deep_model_sensitivity[(deg,un,nepo,c)] = Sequential([     # reminder5
+                deep_model_sensitivity[(deg,un,nepo,c)] = Sequential([     
                     Dense(units=un, activation='relu'),
                     Dense(units=un, activation='relu'),
                     Dense(units=un, activation='relu'),
                     Dense(units=1)
                 ])
         
-                deep_model_sensitivity[deg,un,nepo,c].compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error') # reminder6
-                deep_model_sensitivity[deg,un,nepo,c].fit(X_train_scaled_dnn, y_train_scaled_indicator[c], epochs=nepo, batch_size=8, verbose=0) # reminder7
+                deep_model_sensitivity[deg,un,nepo,c].compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error') 
+                deep_model_sensitivity[deg,un,nepo,c].fit(X_train_scaled_dnn, y_train_scaled_indicator[c], epochs=nepo, batch_size=8, verbose=0) 
                 predictions_sens[deg,un,nepo,c] = pd.DataFrame(index= df_rai.index, columns=['deepnn'])
                 predictions_sens[deg,un,nepo,c].iloc[:train_size] = y_scaler_indicator[c].inverse_transform(deep_model_sensitivity[deg,un,
                                                                                                                                    nepo,c](X_train_scaled_dnn).numpy())
