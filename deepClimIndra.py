@@ -229,9 +229,9 @@ tf.random.set_seed(212) # alumni 212
 
 for i in regions:
     deep_model_indicator[i] = Sequential([
-        Dense(units=300, activation="relu"),
-        Dense(units=300, activation="relu"),
-        Dense(units=300, activation="relu"),
+        Dense(units=100, activation="relu"),
+        Dense(units=100, activation="relu"),
+        Dense(units=100, activation="relu"),
         Dense(units=1)
     ])
     
@@ -313,6 +313,56 @@ print("RMSE train: {}%, RMSE test: {}%, RMSE difference (test - train): {}%"\
 df_naive_indicator = df_rai.shift(1)
 
 for i in regions:
-    err = mean_absolute_percentage_error(y_true = y_test_indicator[i],
-                                         y_pred=df_naive_indicator[i].iloc[train_size:])
+    err = mean_squared_error(y_true = y_test_indicator[i],
+                             y_pred=df_naive_indicator[i].iloc[train_size:])
     print(f"residency={i}, err={round(err*100, 2)}%") # test
+
+## hyperparameter sensitivity analysis
+deep_model_sensitivity = dict()
+predictions_sens = dict()
+errors_indicator_sensitivity = dict()
+
+time = t.to_numpy().reshape(-1,1)
+tf.random.set_seed(42)
+
+for deg in range(1,3): # 1,2   (previously was degree=3)
+    poly = PolynomialFeatures(degree= deg, include_bias=False)  # reminder1
+    X_dnn = poly.fit_transform(time)    # reminder2
+    X_train_dnn = X_dnn[: train_size, : ]      # reminder3
+    X_test_dnn = X_dnn[train_size: , : ] 
+    x_scaler_dnn = StandardScaler().fit(X_train_dnn)  # reminder4
+    X_train_scaled_dnn = x_scaler_dnn.transform(X_train_dnn)  
+    X_test_scaled_dnn = x_scaler_dnn.transform(X_test_dnn)
+#     x_scaler_all_dnn = StandardScaler().fit(X_dnn)   
+#     X_scaled_dnn = x_scaler_all_dnn.transform(X_dnn)   
+
+    for c in regions:
+        print("--------------")
+        for nepo in range(50,150,50):   # 50, 100
+            for un in range(50,150,50):
+    
+                deep_model_sensitivity[(deg,un,nepo,c)] = Sequential([     # reminder5
+                    Dense(units=un, activation='relu'),
+                    Dense(units=un, activation='relu'),
+                    Dense(units=un, activation='relu'),
+                    Dense(units=1)
+                ])
+        
+                deep_model_sensitivity[deg,un,nepo,c].compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error') # reminder6
+                deep_model_sensitivity[deg,un,nepo,c].fit(X_train_scaled_dnn, y_train_scaled_indicator[c], epochs=nepo, batch_size=8, verbose=0) # reminder7
+                predictions_sens[deg,un,nepo,c] = pd.DataFrame(index= df_rai.index, columns=['deepnn'])
+                predictions_sens[deg,un,nepo,c].iloc[:train_size] = y_scaler_indicator[c].inverse_transform(deep_model_sensitivity[deg,un,
+                                                                                                                                   nepo,c](X_train_scaled_dnn).numpy())
+                predictions_sens[deg,un,nepo,c].iloc[train_size:] = y_scaler_indicator[c].inverse_transform(deep_model_sensitivity[deg,un,
+                                                                                                                                   nepo,c](X_test_scaled_dnn).numpy())
+                
+                errors_indicator_sensitivity[deg,un,nepo,c] =  mean_squared_error(y_true=y_test_indicator[c],
+                                                                                  y_pred= y_scaler_indicator[c]\
+                                                                                  .inverse_transform(deep_model_sensitivity[deg,
+                                                                                                                            un,
+                                                                                                                            nepo,
+                                                                                                                            c](X_test_scaled_dnn).numpy()).flatten(), 
+                                                                                  squared=False) # reminder8
+
+                print(f"Residency = {c}, test-RMSE deepnn: {format(errors_indicator_sensitivity[deg,un,nepo,c], '.1%')} , deg={deg}, un={un}, nepo={nepo},  ")
+

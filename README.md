@@ -20,8 +20,8 @@ If you find this code useful in your study, please  consider citing our paper:
 
 
 `
-@article{herhoIrawan23,
-         author={Herho, S. H. S. and Irawan, D. E.},
+@article{herhoEtAl23b,
+         author={Herho, S. H. S. and Irawan, D. E. and Fajary, F. R. },
          title={{P}erformance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over {I}ndramayu, {I}ndonesia},
          journal={{I}nternational {J}ournal of {D}ata {S}cience},
          year={2023},
@@ -50,4 +50,4 @@ Climate Hazards Infrared Precipitation with Stations (CHIRPS) precipitation data
 
 ### Acknowledgements
 
-Faiz R. Fajary (Hiroshima University) and Spyros Giannelos (Imperial College London) were acknowledged for providing valuable discussion. This study was supported by ITB Research, Community Service and Innovation Program (P3MI-ITB).
+Spyros Giannelos (Imperial College London) was acknowledged for providing valuable discussion. This study was supported by ITB Research, Community Service and Innovation Program (P3MI-ITB).
