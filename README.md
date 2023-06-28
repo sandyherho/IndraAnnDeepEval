@@ -10,7 +10,7 @@
 ![Overleaf](https://img.shields.io/badge/-Overleaf-47A141?logo=Overleaf&style=for-the-badge&logoColor=white)
 
 
-This GitHub repository contains code used for **Performance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over Indramayu, Indonesia** created by [Sandy H. S. Herho](https://scholar.google.com/citations?user=uYQgjxMAAAAJ&hl=id), [Dasapta E. Irawan](https://scholar.google.com/citations?user=Myvc78MAAAAJ&hl=en) and [Faiz R. Fajary](https://scholar.google.com/citations?user=cTqtdTIAAAAJ&hl=en), and [Siti N. Kaban](https://scholar.google.com/citations?user=Jc0NPJsAAAAJ&hl=en) at the [Applied Geology Research Group](https://itb.ac.id/applied-geology-research-group), Bandung Institute of Technology (ITB), Indonesia.
+This GitHub repository contains code used for **Performance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over Indramayu, Indonesia** created by [Sandy H. S. Herho](https://scholar.google.com/citations?user=uYQgjxMAAAAJ&hl=id), [Dasapta E. Irawan](https://scholar.google.com/citations?user=Myvc78MAAAAJ&hl=en), [Faiz R. Fajary](https://scholar.google.com/citations?user=cTqtdTIAAAAJ&hl=en), [Rusmawan Suwarman](https://scholar.google.com/citations?user=NfMfR8LMVz8C&hl=en) and [Siti N. Kaban](https://scholar.google.com/citations?user=Jc0NPJsAAAAJ&hl=en) at the [Applied Geology Research Group](https://itb.ac.id/applied-geology-research-group), Bandung Institute of Technology (ITB), Indonesia.
 
 ### License
 This code was released under the [GPL-3.0 License](https://github.com/sandyherho/IndraAnnDeepEval/blob/main/LICENSE.txt).
@@ -21,7 +21,7 @@ If you find this code useful in your study, please  consider citing our paper:
 
 `
 @article{herhoEtAl23b,
-         author={Herho, S. H. S. and Irawan, D. E. and Fajary, F. R. and Kaban, S. N. },
+         author={Herho, S. H. S. and Irawan, D. E. and Fajary, F. R. and Suwarman, R. and Kaban, S. N. },
          title={{P}erformance evaluation of a simple feed-forward deep neural network model applied to annual rainfall anomaly index (RAI) over {I}ndramayu, {I}ndonesia},
          journal={xxxxx},
          year={2023},
